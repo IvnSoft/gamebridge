@@ -1,0 +1,59 @@
+gamebridge is distributed under the GNU General Public License, version 2;
+see LICENSE. The kernel module declares MODULE_LICENSE("GPL") and every source
+file carries an SPDX identifier.
+
+This notice records the two pieces of it that are not the author's own work, and
+one thing that is deliberately absent.
+
+
+NOT ORIGINAL WORK
+
+  driver/xc2028.h
+    A partial verbatim copy of drivers/media/tuners/xc2028.h from Linux v6.16,
+    Copyright (c) 2007-2008 Mauro Carvalho Chehab <mchehab@kernel.org>,
+    GPL-2.0, trimmed to the declarations this driver uses.
+
+    It is copied rather than included because that header is private: it lives
+    under drivers/ instead of include/media/, so it ships in no kernel-devel
+    package and an out-of-tree module cannot reach it. The file's own comment
+    explains the coupling risk this creates and how to refresh it.
+
+  Structure, not code
+    driver/gb-alsa.c follows the shape of the in-tree usbtv-audio.c, and the
+    URB-completion frame assembler follows usbtv and stk1160. Those drivers were
+    read for structure; no code was copied from them. Where the resemblance is
+    close enough to matter, the source files say so in comments.
+
+  Register knowledge
+    The CX25840 initialisation sequences come from the chip's datasheet, from
+    the in-tree cx25840 driver's behaviour, and from observing Adaptec's Windows
+    driver on the wire. docs/internals/ records which facts came from which.
+
+
+DELIBERATELY ABSENT: THE FIRMWARE
+
+The device cannot work without Adaptec's 8051 firmware, and it is not in this
+repository -- neither the binary nor any image extracted from it. The
+firmware is fetched before building from a public mirror of the original
+driver CD and extracted locally, on the machine that will use it, by tools in this
+repository.
+
+This is deliberate, not an oversight, and the short version is: 
+extracting firmware from a driver you legitimately possess, to operate hardware
+you own, is interoperability. Redistributing that firmware is a separate act,
+a different legal question, and this project gets no benefit from taking it on.
+Adaptec was acquired in 2010 and the product line is long dead, so there is 
+nobody left to ask for a grant.
+
+About two dozen lines of annotated 8051 disassembly are quoted in
+docs/internals/ (README.md, ir-receiver.md and tuner.md), each next to the
+finding it supports. They are short excerpts, not the firmware: nothing can be
+rebuilt from them, but were needed by a reader to check those findings.
+
+
+THE HARDWARE
+
+Adaptec GameBridge AVC-1410, discontinued in 2004. "Adaptec" and "GameBridge"
+are the trademarks of their respective owners, used here only to say which
+device this driver operates. This project is not affiliated with, endorsed by,
+or derived from any work of Adaptec, PMC-Sierra, or their successors.

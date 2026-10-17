@@ -1,0 +1,108 @@
+devices seen: [(1, 50)]
+95 I2C command(s), 4 other command(s)
+
+=== non-I2C commands, in order ===
+    1929558885  ?                  [de 00]
+    1929559690  ?                  [85]
+    1929674360  ?                  [0b]
+    1929776364  ?                  [85]
+
+=== I2C traffic, in order ===
+    1929675565  CX25840   reg 0x0803 = 03
+    1929676855  CX25840   set pointer 0x0803, read 1
+    1929678252  CX25840   reg 0x0803 = 03
+    1929679392  CX25840   set pointer 0x0803, read 1
+    1929680702  CX25840   set pointer 0x0100, read 1
+    1929682097  CX25840   set pointer 0x08d0, read 4
+    1929683834  CX25840   reg 0x08d0 = 70 38 06 1f
+    1929685598  CX25840   set pointer 0x0100, read 4
+    1929687616  CX25840   set pointer 0x0158, read 4
+    1929689280  CX25840   reg 0x0158 = 00 23 87 06
+    1929690979  CX25840   set pointer 0x0158, read 4
+    1929692768  CX25840   reg 0x0158 = 00 e1 86 06
+    1929694404  CX25840   set pointer 0x0158, read 4
+    1929696113  CX25840   reg 0x0158 = 00 e0 86 06
+    1929697769  CX25840   reg 0x0158 = 00 e1 86 06
+    1929699400  CX25840   set pointer 0x0158, read 4
+    1929701096  CX25840   reg 0x0158 = 00 e1 86 10
+    1929702689  CX25840   set pointer 0x015c, read 4
+    1929704408  CX25840   reg 0x015c = 00 e3 86 06
+    1929706042  CX25840   set pointer 0x015c, read 4
+    1929707780  CX25840   reg 0x015c = 00 e1 86 06
+    1929709404  CX25840   set pointer 0x015c, read 4
+    1929711279  CX25840   reg 0x015c = 00 e0 86 06
+    1929712931  CX25840   reg 0x015c = 00 e1 86 06
+    1929714641  CX25840   reg 0x0134 = 02 18 0a 00
+    1929716333  CX25840   set pointer 0x013c, read 4
+    1929718098  CX25840   reg 0x013c = 01 00 36 00
+    1929719767  CX25840   reg 0x013c = 00 00 36 00
+    1929721419  CX25840   set pointer 0x0114, read 4
+    1929723202  CX25840   reg 0x0114 = 40 8c 07 00
+    1929724891  CX25840   set pointer 0x0118, read 4
+    1929726681  CX25840   reg 0x0118 = 02 00 00 00
+    1929728320  CX25840   reg 0x04a4 = 00 80 00 00
+    1929729991  CX25840   reg 0x04a4 = 00 00 00 00
+    1929731656  CX25840   set pointer 0x0498, read 4
+    1929733450  CX25840   reg 0x0498 = 02 08 50 00
+    1929735099  CX25840   set pointer 0x0400, read 4
+    1929736787  CX25840   reg 0x0400 = 00 e0 04 00
+    1929738411  CX25840   set pointer 0x04a0, read 4
+    1929740101  CX25840   reg 0x04a0 = 0f 02 5c 00
+    1929741720  CX25840   set pointer 0x049c, read 4
+    1929743571  CX25840   reg 0x049c = 14 40 50 20
+    1929745313  CX25840   set pointer 0x0420, read 4
+    1929746985  CX25840   reg 0x0420 = 80 80 00 3c
+    1929748652  CX25840   set pointer 0x08d0, read 4
+    1929750443  CX25840   reg 0x08d0 = 70 38 06 1f
+    1929752393  CX25840   set pointer 0x08e0, read 4
+    1929754097  CX25840   reg 0x08e0 = 70 38 06 03
+    1929755749  CX25840   reg 0x0404 = 36 29 10 04
+    1929757510  CX25840   reg 0x0408 = 00 80 00 0f
+    1929759136  CX25840   set pointer 0x0120, read 4
+    1929760903  CX25840   reg 0x0120 = 01 00 01 10
+    1929762751  CX25840   set pointer 0x0494, read 4
+    1929764507  CX25840   reg 0x0494 = 00 03 1f 16
+    1929766103  CX25840   set pointer 0x048c, read 4
+    1929767844  CX25840   reg 0x048c = dc 20 10 00
+    1929769528  CX25840   set pointer 0x04a0, read 4
+    1929771214  CX25840   reg 0x04a0 = 2f 3e 5c 00
+    1929772856  CX25840   set pointer 0x0100, read 4
+    1929774746  CX25840   reg 0x0100 = 04 84 00 11
+    1929777255  CX25840   set pointer 0x0400, read 4
+    1929779075  CX25840   reg 0x0400 = 00 e0 04 00
+    1929780703  CX25840   set pointer 0x0100, read 4
+    1929782384  CX25840   set pointer 0x0498, read 4
+    1929784134  CX25840   reg 0x0498 = 02 08 50 00
+    1929785763  CX25840   reg 0x0418 = 00 00 00 04
+    1929787373  CX25840   reg 0x041c = 00 20 08 00
+    1929788936  CX25840   set pointer 0x0400, read 4
+    1929790643  CX25840   reg 0x0400 = 21 e0 04 00
+    1929792212  CX25840   reg 0x0474 = 19 70 1e 1e
+    1929793895  CX25840   reg 0x0478 = 1f 02 50 66
+    1929795496  CX25840   reg 0x047c = 1f 7c 08 00
+    1929797093  CX25840   set pointer 0x0100, read 4
+    1929798765  CX25840   reg 0x0470 = 7e 00 2d 5b
+    1929800373  CX25840   set pointer 0x049c, read 4
+    1929802126  CX25840   reg 0x049c = 14 40 50 20
+    1929803642  CX25840   set pointer 0x0478, read 4
+    1929805381  CX25840   reg 0x0478 = 1f 02 58 66
+    1929806934  CX25840   reg 0x042c = 00 00 00 60
+    1929808769  CX25840   reg 0x0414 = 17
+    1929809931  CX25840   reg 0x0415 = 6c
+    1929811151  CX25840   set pointer 0x0416, read 1
+    1929812507  CX25840   reg 0x0416 = 05
+    1929813644  CX25840   reg 0x0420 = 80
+    1929814743  CX25840   reg 0x0421 = 80
+    1929816043  CX25840   reg 0x0422 = 00
+    1929817229  CX25840   reg 0x0418 = 00 00 00 04
+    1929818847  CX25840   reg 0x041c = 00 20 08 00
+    1929820591  CX25840   set pointer 0x0100, read 4
+    1929822495  CX25840   reg 0x0100 = 04 84 00 11
+    1929824130  CX25840   set pointer 0x0400, read 4
+    1929825938  CX25840   reg 0x0400 = 21 e0 04 00
+    1929827565  CX25840   set pointer 0x0100, read 4
+    1929829380  CX25840   set pointer 0x0498, read 4
+    1929831196  CX25840   reg 0x0498 = 02 08 50 00
+
+=== summary ===
+  CX25840: 95 transaction(s), 56 register write(s)

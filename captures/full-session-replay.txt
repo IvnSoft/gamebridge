@@ -1,0 +1,3175 @@
+# Faithful ordered replay of the Windows driver session.
+# CMD <hex>   send on EP 0x01 OUT and drain the reply on EP 0x81 IN
+# SETIF <n>   SET_INTERFACE interface 0 alt n
+# CLRHALT <ep>  CLEAR_FEATURE(ENDPOINT_HALT)
+CLRHALT 0x01
+CLRHALT 0x81
+CMD de 00
+CMD 85
+CMD 0b
+CMD 08 44 03 08 03 03
+CMD 09 02 01 44 08 03
+CMD 08 44 03 08 03 03
+CMD 09 02 01 44 08 03
+CMD 09 02 01 44 01 00
+CMD 09 02 04 44 08 d0
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 23 87 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e1 86 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e0 86 06
+CMD 08 44 06 01 58 00 e1 86 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e1 86 10
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e3 86 06
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e1 86 06
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e0 86 06
+CMD 08 44 06 01 5c 00 e1 86 06
+CMD 08 44 06 01 34 02 18 0a 00
+CMD 09 02 04 44 01 3c
+CMD 08 44 06 01 3c 01 00 36 00
+CMD 08 44 06 01 3c 00 00 36 00
+CMD 09 02 04 44 01 14
+CMD 08 44 06 01 14 40 8c 07 00
+CMD 09 02 04 44 01 18
+CMD 08 44 06 01 18 02 00 00 00
+CMD 08 44 06 04 a4 00 80 00 00
+CMD 08 44 06 04 a4 00 00 00 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 02 08 50 00
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 00 e0 04 00
+CMD 09 02 04 44 04 a0
+CMD 08 44 06 04 a0 0f 02 5c 00
+CMD 09 02 04 44 04 9c
+CMD 08 44 06 04 9c 14 40 50 20
+CMD 09 02 04 44 04 20
+CMD 08 44 06 04 20 80 80 00 3c
+CMD 09 02 04 44 08 d0
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 08 e0
+CMD 08 44 06 08 e0 70 38 06 03
+CMD 08 44 06 04 04 36 29 10 04
+CMD 08 44 06 04 08 00 80 00 0f
+CMD 09 02 04 44 01 20
+CMD 08 44 06 01 20 01 00 01 10
+CMD 09 02 04 44 04 94
+CMD 08 44 06 04 94 00 03 1f 16
+CMD 09 02 04 44 04 8c
+CMD 08 44 06 04 8c dc 20 10 00
+CMD 09 02 04 44 04 a0
+CMD 08 44 06 04 a0 2f 3e 5c 00
+CMD 09 02 04 44 01 00
+CMD 08 44 06 01 00 04 84 00 11
+CMD 85
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 00 e0 04 00
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 02 08 50 00
+CMD 08 44 06 04 18 00 00 00 04
+CMD 08 44 06 04 1c 00 20 08 00
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 08 44 06 04 74 19 70 1e 1e
+CMD 08 44 06 04 78 1f 02 50 66
+CMD 08 44 06 04 7c 1f 7c 08 00
+CMD 09 02 04 44 01 00
+CMD 08 44 06 04 70 7e 00 2d 5b
+CMD 09 02 04 44 04 9c
+CMD 08 44 06 04 9c 14 40 50 20
+CMD 09 02 04 44 04 78
+CMD 08 44 06 04 78 1f 02 58 66
+CMD 08 44 06 04 2c 00 00 00 60
+CMD 08 44 03 04 14 17
+CMD 08 44 03 04 15 6c
+CMD 09 02 01 44 04 16
+CMD 08 44 03 04 16 05
+CMD 08 44 03 04 20 80
+CMD 08 44 03 04 21 80
+CMD 08 44 03 04 22 00
+CMD 08 44 06 04 18 00 00 00 04
+CMD 08 44 06 04 1c 00 20 08 00
+CMD 09 02 04 44 01 00
+CMD 08 44 06 01 00 04 84 00 11
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 02 08 50 00
+SETIF 1
+CLRHALT 0x01
+CLRHALT 0x81
+CMD 85
+CMD 86
+CMD 08 44 03 08 08 f6
+CMD 09 02 04 44 08 d0
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e3 86 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e1 86 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e0 86 06
+CMD 85
+CMD 08 44 06 01 58 00 e1 86 06
+CMD 09 02 04 44 01 58
+CMD 08 44 06 01 58 00 e1 86 10
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e3 86 06
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e1 86 06
+CMD 09 02 04 44 01 5c
+CMD 08 44 06 01 5c 00 e0 86 06
+CMD 08 44 06 01 5c 00 e1 86 06
+CMD 08 44 06 01 34 02 18 0a 00
+CMD 85
+CMD 09 02 04 44 01 3c
+CMD 08 44 06 01 3c 01 00 37 00
+CMD 08 44 06 01 3c 00 00 37 00
+CMD 09 02 04 44 01 14
+CMD 08 44 06 01 14 40 8c 07 00
+CMD 09 02 04 44 01 18
+CMD 08 44 06 01 18 02 00 00 00
+CMD 08 44 06 04 a4 00 80 00 00
+CMD 08 44 06 04 a4 00 00 00 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 02 08 50 00
+CMD 85
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 00 e0 04 00
+CMD 09 02 04 44 04 a0
+CMD 08 44 06 04 a0 0f 02 5c 00
+CMD 09 02 04 44 04 9c
+CMD 08 44 06 04 9c 14 40 50 20
+CMD 09 02 04 44 04 20
+CMD 08 44 06 04 20 80 80 00 3c
+CMD 09 02 04 44 08 d0
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 08 e0
+CMD 08 44 06 08 e0 70 38 06 03
+CMD 85
+CMD 08 44 06 04 04 36 29 10 04
+CMD 08 44 06 04 08 00 80 00 0f
+CMD 09 02 04 44 01 20
+CMD 08 44 06 01 20 01 00 01 10
+CMD 09 02 04 44 04 94
+CMD 08 44 06 04 94 00 03 1f 16
+CMD 09 02 04 44 04 8c
+CMD 08 44 06 04 8c dc 20 10 00
+CMD 09 02 04 44 04 a0
+CMD 08 44 06 04 a0 2f 3e 5c 00
+CMD 85
+CMD 09 02 04 44 01 00
+CMD 08 44 06 01 00 04 84 00 11
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 00 e0 04 00
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 02 08 50 00
+CMD 08 44 06 04 18 00 00 00 04
+CMD 08 44 06 04 1c 00 20 08 00
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 85
+CMD 08 44 06 04 74 19 70 1e 1e
+CMD 08 44 06 04 78 1f 02 50 66
+CMD 08 44 06 04 7c 1f 7c 08 00
+CMD 09 02 04 44 01 00
+CMD 08 44 06 04 70 7e 00 2d 5b
+CMD 09 02 04 44 04 9c
+CMD 08 44 06 04 9c 14 40 50 20
+CMD 09 02 04 44 04 78
+CMD 08 44 06 04 78 1f 02 58 66
+CMD 08 44 06 04 2c 00 00 00 60
+CMD 09 02 04 44 08 d0
+CMD 85
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 21 a0 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 08 44 06 04 00 21 c0 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 09 02 04 44 01 00
+CMD 08 44 06 01 00 04 84 00 00
+CMD 09 02 04 44 04 00
+CMD 08 44 06 04 00 21 e0 04 00
+CMD 85
+CMD 09 02 04 44 01 00
+CMD 09 02 04 44 04 98
+CMD 08 44 06 04 98 80 20 50 00
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 09 00 00 00
+CMD 85
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 01
+CMD 08 44 06 08 d0 12 10 01 01
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 05
+CMD 08 44 06 01 08 0f 04 0a 18
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 08 f8 00 80 01 08
+CMD 08 44 06 09 00 55 55 01 08
+CMD 08 44 06 09 04 55 55 01 08
+CMD 08 44 06 09 0c 55 55 01 08
+CMD 85
+CMD 08 44 03 01 27 50
+CMD 08 44 03 08 10 01
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 09 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 00
+CMD 08 44 03 08 08 f6
+CMD 09 02 04 44 01 00
+CMD 08 44 03 08 03 0b
+CMD 09 02 01 44 00 00
+CMD 85
+CMD 08 44 03 00 00 24
+CMD 08 44 03 08 01 00
+CMD 08 44 03 08 00 00
+CMD 08 44 3d 08 02 02 27 1b 22 ff ff ff ff ff ff ff 02 2c 6a 12 30 67 12 30 87 d2 af 90 3d 78 e0 ff
+CMD 08 44 3d 08 02 6b f0 7e f8 7f f6 74 55 fd fc 12 2f 5d 90 f8 0a e0 54 e0 90 3d a7 f0 90 f8 11 e0
+CMD 08 44 3d 08 02 44 80 f0 e4 90 f8 ce f0 90 3d 2e f0 a3 f0 90 3d 8c f0 90 3d 49 f0 90 3d 6c 12 11
+CMD 08 44 3d 08 02 f8 08 e0 90 3d 48 f0 90 f8 09 e0 54 c0 90 3d 60 f0 90 f8 0b e0 54 20 90 3d 5f f0
+CMD 08 44 3d 08 02 5f e0 60 61 90 3d 8d e0 64 06 70 59 12 22 f5 12 23 01 74 0d 12 0e d4 e4 90 3e 0a
+CMD 85
+CMD 08 44 3d 08 02 04 f0 80 dd e4 90 f9 b0 f0 74 11 f0 12 0e b8 90 f8 68 30 e0 06 e0 44 01 f0 80 04
+CMD 08 44 3d 08 02 f0 90 3d 5f e0 60 16 12 22 f5 90 3d 8e e0 90 f9 c4 60 05 74 0c f0 80 16 74 07 f0
+CMD 08 44 3d 08 02 74 21 12 0e de 90 3d 5f e0 70 05 12 2c 1d 80 14 90 3d 2a 12 11 35 3f ff ff ff 90
+CMD 08 44 3d 08 02 40 63 12 0e 3a 12 23 2a 78 01 12 23 58 90 3d 5f e0 70 11 90 f8 05 e0 64 0e 60 09
+CMD 08 44 3d 08 02 12 2b cf 12 23 37 60 02 80 17 90 3d 5f e0 70 c2 12 2c 1d 90 3d 38 12 11 11 90 3d
+CMD 08 44 3d 08 02 08 40 03 02 00 5f 12 23 01 74 0a f0 e4 90 f8 2b f0 90 f8 2a f0 90 f8 10 e0 54 fe
+CMD 85
+CMD 08 44 3d 08 02 7d 10 e4 ff 12 23 6a 12 23 2a 90 3d 84 12 11 29 12 0d da 12 0e c8 c0 04 c0 05 c0
+CMD 08 44 3d 08 02 8b 90 3d 88 12 22 b9 50 03 02 06 00 e4 7f 02 fe fd fc 90 3d 88 12 22 94 90 3d 84
+CMD 08 44 3d 08 02 01 d0 00 12 22 69 90 3d 88 12 22 c5 50 03 02 06 00 12 22 8b 90 3d 88 12 22 c5 50
+CMD 08 44 3d 08 02 6d f0 a3 74 a2 12 23 0c 12 23 1a 90 3d 88 12 22 cc 12 11 35 00 00 00 00 90 3d 00
+CMD 08 44 3d 08 02 e0 54 18 64 10 60 03 02 04 1c 90 f8 2a e0 54 f0 f0 44 05 f0 90 f8 63 e0 54 fe f0
+CMD 08 44 3d 08 02 29 7e f9 7f c8 12 2e 8e 90 3d 9b 12 23 42 fd fc 90 3d 9f 12 23 42 ff fe ec 78 10
+CMD 85
+CMD 08 44 3d 08 02 7e 08 90 3d 93 12 22 c3 50 03 02 05 0f e4 ff 7e 02 90 3d 93 12 22 b7 40 0e e4 ff
+CMD 08 44 3d 08 02 0b e0 54 18 64 08 60 08 ef 64 05 60 03 02 05 0f 12 0e 3a 7d c8 7c 00 7f 03 12 30
+CMD 08 44 3d 08 02 60 69 80 3f 12 0d 9b 90 3d 97 12 22 ad 40 03 02 05 0f 7f 02 12 30 77 bf 01 12 12
+CMD 08 44 3d 08 02 7f f0 12 24 63 ef 60 28 90 f8 05 e0 64 0c 60 08 74 0c 12 0c b8 12 0e 00 12 22 ed
+CMD 08 44 3d 08 02 22 9f 12 0e 4e 12 22 ed 60 0e ef 64 05 60 09 12 22 e3 74 08 f0 02 06 00 e4 90 f8
+CMD 08 44 3d 08 02 2e bd 7f 0a 12 26 8b 74 0a 12 0d 05 12 0d 5a 12 0e 44 12 2f 9e ef 60 4e 80 11 7f
+CMD 85
+CMD 08 44 3d 08 02 22 9c 12 23 4d 12 0e 0e 12 22 ed 60 18 ef 64 01 60 13 ef 64 02 60 0e ef 64 03 60
+CMD 08 44 3d 08 02 60 2b 7f 01 12 2e bd 90 f8 05 74 04 12 22 9f 90 3d 1e 12 11 35 00 00 00 00 90 3d
+CMD 08 44 3d 08 02 0d ef 64 03 60 08 12 22 e3 74 04 f0 80 2f 90 3d 60 e0 70 03 12 18 38 7f 03 12 30
+CMD 08 44 3d 08 02 09 4e 7f 05 12 1e 69 c0 04 c0 05 c0 06 c0 07 7f 04 12 1e 69 d0 03 d0 02 d0 01 d0
+CMD 08 44 3d 08 02 67 7f 55 7e 5f 12 2e ea 12 23 2a 90 3d 84 12 23 61 90 3d 88 12 11 29 e4 7f 02 fe
+CMD 08 44 3d 08 02 7f 04 12 1e 69 d0 03 d0 02 d0 01 d0 00 12 22 69 90 3d 84 12 22 c5 50 03 02 07 96
+CMD 85
+CMD 08 44 3d 08 02 74 83 f0 74 6e a3 f0 a3 12 23 0c 74 67 f0 a3 74 47 f0 90 3d 84 12 22 cc 12 11 35
+CMD 08 44 3d 08 02 7f 0b 12 0d 70 12 0e aa 90 f8 0a e0 54 0f 64 04 60 09 a3 e0 54 07 60 03 02 07 96
+CMD 08 44 3d 08 02 56 12 24 63 ef 60 2c 90 f8 05 e0 64 0b 60 08 74 0b 12 0c b8 12 0e aa 12 22 ed 60
+CMD 08 44 3d 08 02 74 07 12 22 9f 12 22 ed 60 0d ef 64 04 60 08 12 22 e3 74 07 f0 80 1f 12 0e 4e 12
+CMD 08 44 3d 08 02 c0 04 c0 05 c0 06 c0 07 7f 02 12 1e 69 d0 03 d0 02 d0 01 d0 00 12 22 69 90 3d 80
+CMD 08 44 3d 08 02 ff 12 2d 43 12 23 2a 90 3d 80 12 11 29 7f 03 12 1e 69 c0 04 c0 05 c0 06 c0 07 7f
+CMD 85
+CMD 08 44 3d 08 02 12 22 c5 50 03 02 09 56 90 3d 4b 74 53 f0 a3 74 6b f0 a3 74 55 f0 a3 74 02 12 23
+CMD 08 44 3d 08 02 00 00 90 3d 00 12 11 35 00 00 00 00 7f 09 12 0d 70 12 0d 5a 7d 64 7c 00 7f 03 12
+CMD 08 44 3d 08 02 05 e0 64 09 60 25 7f 01 12 2e bd 12 23 4d 90 3d 4d 74 55 f0 a3 74 02 12 23 10 74
+CMD 08 44 3d 08 02 56 7f 03 12 2d c5 12 21 4d 02 09 3c 90 f8 05 e0 64 03 60 39 90 3d 4d 74 5e f0 a3
+CMD 08 44 3d 08 02 22 12 11 35 00 00 00 00 90 3d 08 12 11 35 00 00 00 00 12 22 ed 60 0a ef 60 07 12
+CMD 85
+CMD 08 44 3d 08 02 99 12 25 f9 90 3d 2e e0 70 03 12 1f e9 90 3d 2e e0 70 03 02 08 74 7f 03 12 30 56
+CMD 08 44 3d 08 02 90 3d 7c 12 22 b9 50 03 02 00 5f 12 22 8b 90 3d 7c 12 22 b9 50 03 02 00 5f 7d 72
+CMD 08 44 3d 08 02 02 d0 01 d0 00 12 22 69 90 3d 7c 12 22 c5 50 03 02 00 5f 12 22 8b 90 3d 7c 12 22
+CMD 08 44 3d 08 02 74 53 f0 a3 74 4d f0 a3 74 db f0 a3 74 4f f0 a3 74 72 f0 90 3d 7c 12 22 cc 12 11
+CMD 08 44 3d 08 02 12 30 c0 7f 02 12 30 56 12 23 30 64 04 60 03 02 0b 35 90 3d 8d e0 64 0f 60 03 02
+CMD 85
+CMD 08 44 3d 08 02 0d 12 22 f7 90 f8 cc e0 90 3d 4a f0 44 10 f0 90 f8 cc f0 e4 90 f9 c4 f0 12 28 2b
+CMD 08 44 3d 08 02 17 14 60 1d 24 f3 70 3d e4 90 f9 c4 f0 12 28 2b 90 3d a8 74 01 f0 80 2d 74 0e 12
+CMD 08 44 3d 08 02 90 3d 08 12 11 35 00 00 00 00 12 30 a1 12 2e 5f 12 0e 90 90 3d 78 e0 ff 64 0f 60
+CMD 08 44 3d 08 02 3d 78 74 02 80 16 12 0e a2 60 17 90 3d 78 74 01 80 0a 12 0e b8 60 0b 90 3d 78 74
+CMD 08 44 3d 08 02 6c 90 f8 05 e0 64 02 60 53 a3 74 02 12 22 fa 12 22 ed 60 0e ef 64 08 60 09 90 f8
+CMD 08 44 3d 08 02 12 2e 5f 90 3d 1e 12 11 35 00 00 00 00 90 3d 22 12 11 35 00 00 00 00 90 3d 08 12
+CMD 85
+CMD 08 44 3d 08 02 8d e0 64 07 60 08 90 3d 79 e0 64 01 70 60 90 f8 05 e0 64 01 60 47 12 22 ed 60 0d
+CMD 08 44 3d 08 02 11 35 00 00 00 00 12 22 a5 12 23 01 74 02 12 0e de 12 0d 30 12 2e 5f 90 3d 7c 12
+CMD 08 44 3d 08 02 3d 8d e0 64 06 60 08 90 3d 79 e0 64 0f 70 5d 90 f8 05 e0 64 0f 60 3b 74 0f 12 22
+CMD 08 44 3d 08 02 f9 c4 f0 90 f8 cc e0 90 3d 4a f0 54 ef f0 90 f8 cc 12 0e d4 12 28 2b 12 12 3e 90
+CMD 08 44 3d 08 02 0a 19 02 00 5f 12 15 77 02 00 5f f0 e4 90 f8 04 f0 90 f8 13 e0 44 04 f0 7f 01 12
+CMD 08 44 3d 08 02 2f 5d 7e f8 7f 50 90 3d 4b e0 fc a3 e0 fd 12 2f 5d 7e f8 7f 52 7d 42 7c 01 12 2f
+CMD 85
+CMD 08 44 3d 08 02 5d 7e f8 7f 52 7d 42 7c 01 12 2f 5d 22 90 f8 cc e0 90 3d 4a f0 54 ef f0 90 f8 cc
+CMD 08 44 3d 08 02 0f 7c 00 7f 01 12 30 45 7d 32 7c 00 7f 02 12 30 45 22 12 26 8b 7e f8 7f 50 90 3d
+CMD 08 44 3d 08 02 45 22 7e f8 7f 9c 12 2e 8e 90 3d 8f 12 11 29 90 3d 8f 12 11 11 e4 fd fc 90 3d 93
+CMD 08 44 3d 08 02 7f 02 12 30 45 22 7e f8 7f 1e 7d 47 7c 67 12 2f 5d 7d ff e4 ff 12 23 6a 90 3d 2a
+CMD 85
+CMD 08 44 3d 08 02 f8 7f 50 90 3d 4b e0 fc a3 e0 fd 12 2f 5d 7e f8 7f 52 7d 42 7c 01 12 2f 5d 12 2e
+CMD 08 44 3d 08 02 12 30 45 22 7e f8 7f bc 7d 0f 7c 00 12 2f 5d 7e f8 7f be 7d 1f 7c 00 12 2f 5d 22
+CMD 08 44 3d 08 02 56 22 7f 03 12 2d c5 12 21 4d 22 7d 19 7c 00 7f 03 12 30 45 22 12 1f e9 90 3d 2e
+CMD 08 44 3d 08 02 7e f8 7f 1e 12 2f 5d 22 90 3d 88 12 11 29 7f 07 12 1e 69 22 f0 12 2e 2c e4 ff 12
+CMD 08 44 3d 08 02 82 8a 83 e4 93 22 bb 01 0c e5 82 29 f5 82 e5 83 3a f5 83 e0 22 50 06 e9 25 82 f8
+CMD 08 44 3d 08 02 22 50 02 f7 22 bb fe 01 f3 22 f8 bb 01 0d e5 82 29 f5 82 e5 83 3a f5 83 e8 f0 22
+CMD 85
+CMD 08 44 3d 08 02 02 15 83 e0 38 f0 22 bb 01 0a 89 82 8a 83 e0 f5 f0 a3 e0 22 50 06 87 f0 09 e7 19
+CMD 08 44 3d 08 02 ec 38 fc 22 e8 8f f0 a4 cc 8b f0 a4 2c fc e9 8e f0 a4 2c fc 8a f0 ed a4 2c fc ea
+CMD 08 44 3d 08 02 8f f0 a4 cf c5 f0 2e cd 39 fe e4 3c fc ea a4 2d ce 35 f0 fd e4 3c fc 22 75 f0 08
+CMD 08 44 3d 08 02 ee 9b fe ed 9a fd ec 99 fc 0f d5 f0 d6 e4 ce fb e4 cd fa e4 cc f9 a8 82 22 b8 00
+CMD 08 44 3d 08 02 fc eb 33 fb 10 d7 03 99 40 04 eb 99 fb 0f d8 e5 e4 f9 fa 22 78 18 ef 2f ff ee 33
+CMD 85
+CMD 08 44 3d 08 02 fb 22 75 f0 10 ef 2f ff ee 33 fe ed 33 fd cc 33 cc c8 33 c8 10 d7 07 9b ec 9a e8
+CMD 08 44 3d 08 02 42 f0 e9 9d 42 f0 e8 9c 45 f0 22 e8 60 0f ec c3 13 fc ed 13 fd ee 13 fe ef 13 ff
+CMD 08 44 3d 08 02 02 12 10 e0 fc a3 e0 fd a3 e0 fe a3 e0 ff 22 e0 f8 a3 e0 f9 a3 e0 fa a3 e0 fb 22
+CMD 08 44 3d 08 02 4c e4 73 e4 93 a3 c5 83 c5 f0 c5 83 c8 c5 82 c8 f0 a3 c5 83 c5 f0 c5 83 c8 c5 82
+CMD 08 44 3d 08 02 f0 e5 82 15 82 70 02 15 83 e0 fa 38 f0 22 f8 e0 fb a3 a3 e0 25 f0 f9 f0 e5 82 15
+CMD 85
+CMD 08 44 3d 08 02 f8 02 12 20 bb fe 05 e9 f8 02 12 29 89 82 8a 83 02 12 32 d0 83 d0 82 f8 e4 93 70
+CMD 08 44 3d 08 02 08 e6 fd 08 e6 fe 08 e6 ff 22 e2 fc 08 e2 fd 08 e2 fe 08 e2 ff 22 e4 93 fc 74 01
+CMD 08 44 3d 08 02 74 01 93 fa 74 02 93 f9 22 90 f8 04 e0 90 3e 0b f0 90 f8 37 e0 30 e7 0d 7e f8 7f
+CMD 08 44 3d 08 02 63 12 1b 86 70 03 02 13 b4 90 3d 67 12 1b 86 70 03 02 13 b4 90 3d 49 e0 14 60 6f
+CMD 08 44 3d 08 02 12 1c 5f 90 3d 49 74 02 f0 7d 00 7c 28 12 15 6b 7d 00 7c 80 80 33 90 3d 67 12 1a
+CMD 08 44 3d 08 02 74 01 f0 7d b9 7c 27 12 15 6b 7d 1c 7c 7f 12 2f 5d 02 13 a0 90 f8 04 e0 30 e0 2c
+CMD 85
+CMD 08 44 3d 08 02 3e 0b e0 30 e0 03 12 1b 2e 02 13 7a 12 1c a4 12 1a ec 90 3d 63 12 1a dc 40 65 12
+CMD 08 44 3d 08 02 e3 90 3d 67 12 1b 00 50 3b 12 1c 18 90 3d 67 12 1b 00 50 30 90 3e 0b e0 30 e0 03
+CMD 08 44 3d 08 02 20 e0 03 12 1b 2e 12 1c 5f 90 3d 63 12 11 35 00 00 00 00 90 3d 67 12 11 35 00 00
+CMD 08 44 3d 08 02 50 d0 03 d0 02 d0 01 d0 00 12 1b bf 70 56 12 1b 62 90 3d 10 12 11 29 90 3d 10 12
+CMD 08 44 3d 08 02 00 50 1c 90 3e 0b e0 30 e4 06 12 1b 2e 12 1b b0 12 1c 6f 12 11 35 00 00 00 00 7f
+CMD 85
+CMD 08 44 3d 08 02 4d 12 1c 37 90 3d 40 12 11 11 90 3d 0c 12 1b 00 40 1f 12 1b f5 12 1b 00 40 03 02
+CMD 08 44 3d 08 02 12 1b b0 12 1c 6f 12 11 35 00 00 00 00 12 1c 2e 12 11 35 00 00 00 00 7f 01 02 2e
+CMD 08 44 3d 08 02 02 c0 03 12 15 50 d0 03 d0 02 d0 01 d0 00 12 1b bf 70 58 12 1b 62 90 3d 10 12 1b
+CMD 08 44 3d 08 02 3d 0c 12 1b 65 12 1c 9e 90 3e 0b e0 20 e4 06 12 1b 2e 12 30 ac 90 f8 04 e0 44 10
+CMD 08 44 3d 08 02 57 f5 82 e4 34 3d f5 83 e0 fc a3 e0 fd 7e f8 7f 44 12 2f 5d 90 f8 48 e0 44 01 f0
+CMD 85
+CMD 08 44 3d 08 02 12 2f 5d 7e f8 7f 22 22 90 f8 08 e0 54 f0 ff 90 3d 37 f0 90 f8 05 74 fe f0 90 f8
+CMD 08 44 3d 08 02 c5 40 16 d8 50 16 de 60 16 e4 70 16 ef 80 17 03 90 17 38 a0 17 50 b0 17 68 c0 17
+CMD 08 44 3d 08 02 0f 70 f2 7f 01 12 2e bd 80 eb 90 3d 5f e0 60 08 90 f9 c4 74 0d f0 80 05 e4 90 f9
+CMD 08 44 3d 08 02 ef 54 0f 14 60 0c 24 fd 60 10 24 fd 60 14 24 07 80 18 90 f8 ce 74 09 f0 80 16 90
+CMD 08 44 3d 08 02 44 01 f0 80 b7 54 fe f0 80 b2 74 02 12 17 f8 12 2f 8a 6e 60 03 02 17 f7 ef 54 0f
+CMD 08 44 3d 08 02 d3 90 f8 ce 74 23 f0 80 cb 90 f8 ce 74 20 f0 80 c3 90 f9 c4 74 09 f0 7f 05 12 29
+CMD 85
+CMD 08 44 3d 08 02 17 f7 12 2c b4 80 f2 7d 6e 7c 63 80 0a 7d 20 7c 6b 80 04 7d 3d 7c 5b 7f 47 7e 67
+CMD 08 44 3d 08 02 74 4b f0 12 2f 7e 6f 60 03 02 17 f7 7f 02 12 30 77 bf 01 ef 90 f8 17 e0 20 e6 e8
+CMD 08 44 3d 08 02 03 02 17 f7 12 27 a7 80 f2 7f 0a 12 26 8b e4 ff 12 2e bd 12 2f 7e 6f 60 03 02 17
+CMD 08 44 3d 08 02 6f 70 72 7f 02 12 30 77 bf 01 16 90 f8 17 e0 20 e6 0f 12 00 03 90 f8 5d e0 44 e0
+CMD 08 44 3d 08 02 17 74 07 f0 80 12 90 f8 09 e0 90 f9 c4 30 e5 05 74 0b f0 80 03 74 01 f0 12 18 15
+CMD 08 44 3d 08 02 90 f9 c4 f0 12 30 a1 7f 05 12 29 27 e4 ff 12 2e bd 22 7f 0b 12 26 8b e4 ff 12 2e
+CMD 85
+CMD 08 44 3d 08 02 02 12 30 45 22 90 f9 bd e0 b4 3f 0a 90 f8 5f e0 54 7f f0 44 80 f0 90 f8 37 e0 30
+CMD 08 44 3d 08 02 3c 12 30 95 7e f8 7f 40 12 2e 8e 90 3d 22 12 1b 5b 90 f8 4f e0 30 e7 14 7e f8 7f
+CMD 08 44 3d 08 02 fc 90 3d 22 12 1b 00 70 03 02 1a d0 e4 ff fe fd fc 90 3d 08 12 1b 00 70 03 02 1a
+CMD 08 44 3d 08 02 22 90 3e 11 12 11 35 00 04 32 38 80 16 90 3e 11 80 27 90 3d 7a e0 90 3e 11 b4 02
+CMD 08 44 3d 08 02 35 00 06 1a 80 90 3e 15 12 11 35 00 00 00 03 90 3e 19 12 11 35 00 00 00 08 e4 90
+CMD 08 44 3d 08 02 11 11 90 3e 15 12 1a ec 90 3d 1e 12 1a dc 40 04 7f 01 80 02 7f 00 90 3e 0f ef f0
+CMD 85
+CMD 08 44 3d 08 02 12 11 11 90 3d 22 12 1a dc 40 04 7f 01 80 02 7f 00 90 3e 0b ef f0 90 3d 1e 12 11
+CMD 08 44 3d 08 02 90 3e 19 12 1a ec 90 3d 08 12 1b 00 50 04 7f 01 80 02 7f 00 90 3e 0d ef f0 90 3d
+CMD 08 44 3d 08 02 54 07 14 60 5b 14 60 7a 24 02 60 03 02 1a bb 90 3e 0b e0 60 0f a3 e0 60 0b a3 e0
+CMD 08 44 3d 08 02 12 11 35 3f ff ff ff 7d 10 7f 01 12 2d 43 90 3d 3c 12 11 11 12 1c 9e 90 3d 40 12
+CMD 08 44 3d 08 02 a3 e0 60 06 a3 e0 60 02 80 10 80 2e 90 3e 0e e0 60 10 a3 e0 60 0c a3 e0 60 08 90
+CMD 08 44 3d 08 02 90 3d 32 f0 12 1c 8b fe ef 6e 60 03 12 1b 2e 90 f8 04 ee f0 22 90 3d 67 7f 80 7e
+CMD 85
+CMD 08 44 3d 08 02 29 90 3e 0e e4 ff fe fd fc 12 11 1d c3 02 10 cd 75 f0 08 90 f9 a8 02 11 66 e0 75
+CMD 08 44 3d 08 02 44 02 f0 22 ec 54 3f fc 02 11 29 f0 ef 75 f0 03 a4 24 fd f5 82 e4 34 3d f5 83 22
+CMD 08 44 3d 08 02 90 f8 0f e0 90 3e 0d f0 90 f8 ca e0 54 02 90 3d 33 f0 22 12 11 29 90 3d 0c 12 11
+CMD 08 44 3d 08 02 90 f9 af 12 11 66 e0 22 90 f8 26 e0 44 80 f0 22 ec 54 3f fc 02 11 29 12 0f a3 90
+CMD 08 44 3d 08 02 90 3d e1 02 11 a9 12 11 11 90 3e 14 e0 f9 f8 02 10 de e4 ff 7e 60 fd fc 90 3d 0c
+CMD 08 44 3d 08 02 7c 00 22 90 f8 48 e0 54 fe f0 90 3d 10 02 11 1d e4 90 3d 62 f0 90 3d 10 22 90 3d
+CMD 85
+CMD 08 44 3d 08 02 54 3f fc 02 11 29 90 f8 04 e0 44 01 f0 22 ee 54 08 90 3d 35 f0 22 90 f8 04 e0 54
+CMD 08 44 3d 08 02 22 12 0f a3 90 3e 0e 02 11 29 90 3d 40 02 11 29 e4 7f 08 fe fd fc 90 3d 67 22 e4
+CMD 08 44 3d 08 02 e8 ff 33 95 e0 fe 90 3d e9 f0 a3 ef f0 4e 70 03 02 1e 65 90 3d e9 e0 70 04 a3 e0
+CMD 08 44 3d 08 02 a3 e0 ff ee 60 03 02 1e 4c ef 24 9d 70 03 02 1d a8 24 f0 70 03 02 1d b5 24 fe 70
+CMD 08 44 3d 08 02 f1 90 3d e5 12 11 29 12 1b dd 90 3d e4 e0 ff fb e4 fa f9 f8 a3 12 11 11 12 10 3b
+CMD 08 44 3d 08 02 e4 e0 fb e4 fa f9 f8 d0 07 12 10 3b 90 3d e5 12 11 29 ec 4d 4e 4f 70 b7 12 1b 8e
+CMD 08 44 3d 08 02 03 12 11 7b 12 11 b2 12 1b e3 12 1b d2 70 03 02 1c c7 12 2f bd 90 3d e2 e4 75 f0
+CMD 85
+CMD 08 44 3d 08 02 12 1b 54 12 0e e8 ff 12 1b dd 12 1c 7a 74 eb 25 f0 f5 82 e4 34 3d f5 83 e0 fe 90
+CMD 08 44 3d 08 02 70 03 ea 65 83 70 04 7f 30 80 0b 12 1b 8e 50 03 02 1c c7 12 1b d2 12 2f bd 80 f0
+CMD 08 44 3d 08 02 3e 0c 74 04 f0 a3 14 f0 a3 12 11 35 00 00 00 00 eb 12 11 d2 1e 9c 00 1e aa 01 1e
+CMD 08 44 3d 08 02 02 1f 13 7d db 7c 4d 12 1f c5 7d 72 7c 4f 80 5c 7d 6b 7c 53 12 1f d1 7d 02 7c 55
+CMD 08 44 3d 08 02 7c 5c 80 2d 7d 83 7c 62 12 1f dd 74 6e fd fc 80 20 7d 98 7c 56 12 1f dd 7d 2f 7c
+CMD 08 44 3d 08 02 e4 90 f9 b0 f0 04 f0 7f 02 12 2f d8 e4 90 3e 0b f0 90 3e 0c e0 ff 90 3e 0b e0 c3
+CMD 85
+CMD 08 44 3d 08 02 ac 12 2e 8e 12 1b 4d d0 03 d0 02 d0 01 d0 00 12 1c 95 90 f9 a8 74 01 f0 90 f9 b7
+CMD 08 44 3d 08 02 4d d0 03 d0 02 d0 01 d0 00 12 1c 95 90 f9 b0 74 01 f0 90 3e 0b e0 04 f0 02 1f 2e
+CMD 08 44 3d 08 02 7f 20 22 7e f8 7f 1e 12 2f 5d 7e f8 7f 20 22 7e f8 7f 1e 12 2f 5d 7e f8 7f 20 22
+CMD 08 44 3d 08 02 30 80 02 7d 10 e4 ff 12 2b 2d 90 3d 38 12 11 11 90 3d 2a 12 1b 00 50 06 12 2f f1
+CMD 08 44 3d 08 02 0b 60 2e 14 60 52 14 60 6b 02 20 db 90 3d 6c 12 11 1d c0 00 c0 01 c0 02 c0 03 12
+CMD 08 44 3d 08 02 11 29 90 3d 6c 12 11 35 00 00 00 00 90 3e 0b e0 ff d3 94 02 40 41 ef 94 0d 40 41
+CMD 85
+CMD 08 44 3d 08 02 7f 58 12 2e 8e 90 3d 74 12 1b 36 90 3d 74 12 11 11 78 03 12 10 de 90 3d 74 12 11
+CMD 08 44 3d 08 02 12 11 11 90 3d 70 12 1a dc 50 0e 90 3d 2a 12 11 11 90 3d 74 12 1a dc 40 03 12 2f
+CMD 08 44 3d 08 02 31 f0 90 f8 08 e0 ff 90 3d 48 e0 6f 60 06 90 3d 2e 74 01 f0 22 7e f8 7f 58 12 2e
+CMD 08 44 3d 08 02 14 60 0d 24 04 70 0e 90 3e 0b 74 42 f0 02 22 2e 80 0a 02 22 17 ef 30 e4 03 02 22
+CMD 08 44 3d 08 02 2e 80 6e 80 4c ef 30 e4 02 80 72 02 22 28 12 2f 3c 12 11 d2 21 d3 00 21 d5 01 21
+CMD 08 44 3d 08 02 80 40 80 32 80 30 90 3e 0b 74 45 f0 80 3f 90 3e 0b 74 46 f0 80 37 90 3e 0b 74 47
+CMD 08 44 3d 08 02 f0 80 0f ef 30 e4 05 12 2f 56 80 06 90 3e 0b 74 40 f0 90 f8 05 e0 b4 0c 07 90 3e
+CMD 85
+CMD 08 44 3d 08 02 f0 7f 01 12 30 77 bf 01 08 90 3d 36 e0 ff 12 2e bd 22 12 0f a3 90 3d 00 12 11 29
+CMD 08 44 3d 08 02 fd fc 12 11 1d 02 0f b0 74 09 90 f8 05 f0 e4 90 f8 04 f0 90 f8 13 e0 44 04 f0 22
+CMD 08 44 3d 08 02 11 11 78 02 12 10 de 90 3d 38 12 11 29 e4 90 3d 61 f0 90 3d 6c 22 90 f8 07 74 02
+CMD 08 44 3d 08 02 90 f9 c4 22 f0 a3 74 57 f0 a3 74 64 f0 a3 22 a3 f0 a3 74 5f f0 a3 74 55 f0 22 90
+CMD 08 44 3d 08 02 11 29 90 3d 9b 12 11 11 e4 22 90 f8 10 e0 44 04 f0 54 fb f0 22 12 10 de 90 3d 38
+CMD 08 44 3d 08 02 70 36 90 3e 12 e4 12 1c 0e 80 34 90 3e 12 e4 f0 a3 74 80 f0 a3 74 07 f0 80 25 90
+CMD 85
+CMD 08 44 3d 08 02 12 f0 a3 f0 90 3e 0c 12 11 35 00 00 00 00 e4 90 3e 10 f0 a3 f0 90 3e 12 e0 fe a3
+CMD 08 44 3d 08 02 f0 08 ef 12 1b 0a 74 01 f0 90 3e 0b 12 1b a3 30 e7 f7 75 f0 08 ef 12 1b 0a e4 f0
+CMD 08 44 3d 08 02 d0 00 12 0f a3 90 3e 0c 12 11 29 90 3e 10 e4 75 f0 01 12 0f 62 02 23 ce 90 3e 0b
+CMD 08 44 3d 08 02 f8 05 e0 fc 64 09 60 0f ec 64 0b 60 0a ec 64 0a 60 05 ec 64 0c 70 18 12 1b 6d 70
+CMD 08 44 3d 08 02 1b 75 af 06 ef 70 03 02 25 37 e0 70 03 02 25 37 90 f8 0f 74 06 f0 ec 64 07 60 0d
+CMD 08 44 3d 08 02 60 07 90 f8 0f 74 02 80 0a 12 1c 67 60 09 90 f8 0f 74 08 f0 7f 00 22 7e f8 7f c0
+CMD 08 44 3d 08 02 22 e4 90 3e 12 f0 7d 0a e4 ff 12 30 09 90 3e 0c e0 04 f0 e0 c3 94 19 40 a2 7f 01
+CMD 85
+CMD 08 44 3d 08 02 02 25 ca 80 23 80 55 80 27 ef 30 e4 02 80 60 80 4b 90 f8 04 e0 30 e4 28 12 2f 3c
+CMD 08 44 3d 08 02 02 80 31 80 34 90 f8 04 e0 30 e0 1d 12 2f 3c 24 fc 60 06 24 04 70 04 80 20 80 06
+CMD 08 44 3d 08 02 0b 74 08 f0 90 f8 0a e0 54 0f ff bf 05 0a 90 3e 0b e0 b4 0a 03 74 22 f0 90 3e 0b
+CMD 08 44 3d 08 02 3c 24 fc 60 06 24 04 70 10 80 5e 90 f8 05 e0 90 3e 13 b4 02 02 80 12 80 15 ef 30
+CMD 08 44 3d 08 02 60 0e 24 07 70 12 80 26 90 3e 13 74 11 f0 80 24 90 3e 13 74 13 f0 80 1c ef 30 e4
+CMD 08 44 3d 08 02 30 77 bf 01 08 90 3d 36 e0 ff 12 2e bd 22 12 1b ff 90 3d 7b e0 af 02 b4 03 05 12
+CMD 85
+CMD 08 44 3d 08 02 7d 55 7c 5f 12 2f 5d 80 43 90 f9 c4 74 03 f0 80 3b 90 3d 60 e0 ff b4 40 08 90 f9
+CMD 08 44 3d 08 02 e0 44 02 f0 90 f9 cc e0 20 e0 06 90 f8 5c 74 20 f0 12 30 a1 90 f8 0f 74 0e f0 7f
+CMD 08 44 3d 08 02 e4 93 a3 40 03 f6 80 01 f2 08 df f4 80 29 e4 93 a3 f8 54 07 24 0c c8 c3 33 c4 54
+CMD 08 44 3d 08 02 60 bc a3 ff 54 3f 30 e5 09 54 1f fe e4 93 a3 60 01 0e cf 54 c0 25 e0 60 a8 40 b8
+CMD 08 44 3d 08 02 e7 80 be 12 24 63 ef 60 05 7f 03 12 2d c5 12 2f 97 12 11 d2 27 d4 00 27 d6 01 27
+CMD 08 44 3d 08 02 3e 0b 74 42 f0 80 2e 90 3e 0b 74 43 f0 80 26 90 3e 0b 74 44 f0 80 1e 90 3e 0b 74
+CMD 85
+CMD 08 44 3d 08 02 ff 90 3e 0b e0 bf d0 04 24 08 80 00 90 f8 ce f0 22 90 3d 57 74 19 f0 a3 e4 f0 a3
+CMD 08 44 3d 08 02 fc a3 e0 fd 12 2f 5d 7e f8 7f 46 7d 00 7c 01 12 2f 5d 7e f8 7f 50 90 3d 4b e0 fc
+CMD 08 44 3d 08 02 67 12 11 35 00 00 00 00 90 3d 0c 12 11 35 00 00 00 00 90 3d 10 12 11 35 00 00 00
+CMD 08 44 3d 08 02 02 80 39 90 3e 0b 74 22 f0 80 3c 12 2f 3c 14 60 0a 24 fa 60 0e 24 07 70 12 80 26
+CMD 08 44 3d 08 02 05 12 2f 56 80 06 90 3e 0b 74 20 f0 90 3e 0b 12 2f 4e 12 30 77 bf 01 08 90 3d 36
+CMD 08 44 3d 08 02 54 04 60 06 ea 54 fb ff 80 1c ea 44 04 ff 80 16 e9 44 01 90 f8 29 f0 ea 54 10 60
+CMD 08 44 3d 08 02 09 af 03 ad 07 e4 ff 12 30 09 90 f8 28 ea f0 a3 e9 f0 90 f8 10 e0 44 04 f0 54 fb
+CMD 85
+CMD 08 44 3d 08 02 fd fc 90 3d 3c 12 1a ec 90 3d 00 12 1a dc 40 40 90 3e 0b e0 ff 12 30 1d 7d 32 7c
+CMD 08 44 3d 08 02 12 1b 2e e4 90 f8 04 f0 90 3d 40 12 11 35 00 00 00 00 12 1b b0 22 90 f8 37 e0 30
+CMD 08 44 3d 08 02 fc 90 3e 0b 12 11 29 12 1c ae 90 3e 0f 12 1a ec 90 3e 0b 12 1a dc 40 17 e4 7f d0
+CMD 08 44 3d 08 02 30 e0 05 e0 44 01 f0 22 e0 54 fe f0 22 90 3e 0b ec f0 a3 ed f0 ab 07 aa 06 90 3d
+CMD 08 44 3d 08 02 1e ac 02 ad 03 12 2f 5d 7e f8 7f 20 90 3e 0b e0 fc a3 e0 fd 12 2f 5d 12 30 a1 7f
+CMD 08 44 3d 08 02 09 e0 54 0f 90 3e 0b f0 ed 30 e0 07 e0 b4 04 03 12 2b 1f 90 3e 0c e0 20 e1 03 30
+CMD 85
+CMD 08 44 3d 08 02 e4 ff 12 2e bd 22 90 3d 78 e0 90 3d 79 f0 7f 01 12 2e bd 22 90 3e 0d ed f0 90 3e
+CMD 08 44 3d 08 02 10 12 2e 8e 12 1b 4d 90 3d 3c 80 0c 12 1b 10 12 2e 8e 12 1b 4d 90 3d 2a 12 11 29
+CMD 08 44 3d 08 02 03 05 12 2d f9 80 03 12 2c fc ea 24 fe 60 1a 24 fe 24 fd 50 0c 24 04 70 16 90 f9
+CMD 08 44 3d 08 02 7f 02 02 30 45 12 2f 44 54 07 14 70 1d 12 2f 3c 24 fc 60 06 24 04 70 04 80 1e 80
+CMD 08 44 3d 08 02 74 80 f0 90 3e 0b 12 2f 4e 12 30 77 bf 01 08 90 3d 36 e0 ff 12 2e bd 22 e4 90 f9
+CMD 08 44 3d 08 02 7f ac 12 2e 8e 12 1b 4d 90 3d 2a 12 11 29 90 f9 b7 e0 30 e7 f9 e4 90 f9 b0 f0 7e
+CMD 85
+CMD 08 44 3d 08 02 8c 45 e4 ff 12 1b 3e e0 fe 30 e0 1d 12 1b 1f e0 fc a3 e0 4c 60 0c 12 1b 1f 74 ff
+CMD 08 44 3d 08 02 60 e0 ff 64 40 60 38 ef b4 80 02 80 32 12 2f 97 14 60 0c 24 fd 60 0f 24 fd 60 1d
+CMD 08 44 3d 08 02 74 13 f0 22 90 f8 ce 74 10 f0 22 ab 07 90 f9 21 74 06 f0 7f 01 12 2f d8 74 82 12
+CMD 08 44 3d 08 02 74 93 80 0e 90 f9 4a 74 34 f0 7f 01 12 2f d8 a3 74 4c f0 12 2f d8 22 90 3e 1d ef
+CMD 08 44 3d 08 02 0e 12 1b 10 12 2e 8e 12 1b 4d 90 3d 3c 80 0c 12 1b 10 12 2e 8e 12 1b 4d 90 3d 2a
+CMD 08 44 3d 08 02 e4 05 12 2f 56 80 07 ef 24 43 90 3e 0b f0 90 3e 0b 12 2f 4e 12 30 77 bf 01 08 90
+CMD 85
+CMD 08 44 3d 08 02 d8 12 2f 13 90 3d 32 e0 b5 07 10 0a 80 e6 12 1c 8b 90 f8 04 f0 6f 60 03 12 1b 2e
+CMD 08 44 3d 08 02 f0 90 f9 55 74 c1 f0 90 f9 54 74 92 f0 90 f9 68 74 01 f0 22 90 f8 cc e0 44 02 f0
+CMD 08 44 3d 08 02 74 04 12 1c 0e 12 30 a1 12 1b b0 22 e4 90 3e 0b f0 90 3e 0b e0 ff c3 94 04 50 15
+CMD 08 44 3d 08 02 aa 06 a9 07 7b 01 12 0e e8 90 3e 21 f0 90 00 01 12 0f 01 90 3e 20 f0 90 00 02 12
+CMD 08 44 3d 08 02 0c 90 f8 0a e0 20 e4 05 90 f8 d3 80 06 ef 90 f8 d3 60 0a 74 1f f0 7d 02 7f 04 02
+CMD 08 44 3d 08 02 20 90 3e 0b e0 fc a3 e0 fd 12 2f 5d 02 2c 1d 90 f8 c8 e0 fe 54 0e c3 13 24 fe 60
+CMD 85
+CMD 08 44 3d 08 02 e0 ff 54 0f 22 e4 90 3d 36 f0 90 f8 04 e0 22 e0 90 f8 ce f0 7f 01 22 90 3d 36 74
+CMD 08 44 3d 08 02 01 02 0f 40 90 f8 08 e0 54 f0 ff 90 3d 37 e0 22 90 f8 08 e0 ff 54 f0 fe 90 3d 37
+CMD 08 44 3d 08 02 08 f0 7f 00 22 7f 01 22 e4 fd fc c2 99 8f 99 20 99 10 0d bd 00 01 0c d3 ed 94 d0
+CMD 08 44 3d 08 02 22 7f 01 12 2e bd 90 3d 2e 74 01 f0 e4 90 f8 07 f0 90 f8 13 e0 44 10 f0 22 ab 07
+CMD 08 44 3d 08 02 10 e0 54 fd f0 22 50 3d eb 30 31 32 33 34 35 36 37 38 39 61 62 63 64 65 66 00 12
+CMD 08 44 3d 08 02 22 43 89 20 43 8e 10 75 8d fa 75 88 69 75 98 52 22 e4 fe 12 1b 1f e0 fc a3 e0 4c
+CMD 85
+CMD 08 44 3d 08 02 90 f8 24 e0 54 7f f0 44 40 f0 22 12 1b b0 54 7f f0 44 40 f0 22 90 f8 25 e0 54 f0
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 85
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 3d 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 29 08 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+CMD 08 44 03 00 00 04
+CMD 08 44 03 08 03 13
+CMD 85
+CMD 09 02 04 44 01 14
+CMD 08 44 06 01 14 40 8c 07 00
+CMD 08 44 06 09 14 a0 00 00 00
+CMD 08 44 06 09 18 a0 01 00 00
+CMD 08 44 06 01 24 87 b6 00 50
+CMD 08 44 06 08 08 f6 00 00 00
+CMD 08 44 06 09 10 d8 00 b0 12
+CMD 09 02 01 44 08 03
+CMD 08 44 03 08 03 03
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 85
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 00 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 01
+CMD 08 44 06 08 d0 12 10 01 01
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 05
+CMD 08 44 06 01 08 0f 04 0a 18
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 85
+CMD 08 44 06 08 f8 00 80 01 08
+CMD 08 44 06 09 00 55 55 01 08
+CMD 08 44 06 09 04 55 55 01 08
+CMD 08 44 06 09 0c 55 55 01 08
+CMD 08 44 03 01 27 50
+CMD 08 44 03 08 10 01
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 00
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 04
+CMD 08 44 06 01 08 0f 04 0a 18
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 08 f8 00 80 01 08
+CMD 08 44 06 09 00 55 55 01 08
+CMD 08 44 06 09 04 55 55 01 08
+CMD 08 44 06 09 0c 55 55 01 08
+CMD 08 44 03 01 27 50
+CMD 08 44 03 08 10 00
+CMD 85
+CMD 08 44 06 04 18 00 00 00 04
+CMD 08 44 06 04 1c 00 20 08 00
+SETIF 1
+CLRHALT 0x01
+CLRHALT 0x81
+CMD 36 03 00
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 37
+CMD 85
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 01
+CMD 08 44 06 08 d0 12 10 01 1f
+CMD 09 02 01 44 08 10
+CMD 85
+CMD 08 44 03 08 10 05
+CMD 08 44 03 01 27 50
+CMD 08 44 06 01 08 0f 04 0a 10
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 09 00 aa 4f 01 08
+CMD 08 44 06 09 04 aa 4f 01 08
+CMD 08 44 06 09 0c aa 4f 01 08
+CMD 08 44 03 08 10 01
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 00
+CMD 85
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 04
+CMD 08 44 03 01 27 50
+CMD 08 44 06 01 08 0f 04 0a 10
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 09 00 aa 4f 01 08
+CMD 08 44 06 09 04 aa 4f 01 08
+CMD 08 44 06 09 0c aa 4f 01 08
+CMD 08 44 03 08 10 00
+CMD 85
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 04
+CMD 08 44 03 01 27 50
+CMD 08 44 06 01 08 0f 04 0a 10
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 09 00 aa 4f 01 08
+CMD 08 44 06 09 04 aa 4f 01 08
+CMD 08 44 06 09 0c aa 4f 01 08
+CMD 08 44 03 08 10 00
+CMD 08 44 06 04 18 00 00 00 04
+CMD 08 44 06 04 1c 00 20 08 00
+CMD 85
+SETIF 1
+CLRHALT 0x01
+CLRHALT 0x81
+CMD 36 03 00
+CMD 08 44 06 08 d0 70 38 06 1f
+CMD 85
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 01
+CMD 08 44 06 08 d0 12 10 01 01
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 05
+CMD 08 44 06 01 08 0f 04 0a 18
+CMD 08 44 06 01 10 e5 d6 98 00
+CMD 08 44 06 08 f8 00 80 01 08
+CMD 08 44 06 09 00 55 55 01 08
+CMD 85
+CMD 08 44 06 09 04 55 55 01 08
+CMD 08 44 06 09 0c 55 55 01 08
+CMD 08 44 03 01 27 50
+CMD 08 44 03 08 10 01
+CMD 09 02 04 44 08 cc
+CMD 08 44 06 08 cc 00 00 10 00
+CMD 09 02 01 44 08 10
+CMD 08 44 03 08 10 00
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85
+CMD 85

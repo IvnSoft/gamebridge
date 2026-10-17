@@ -1,0 +1,56 @@
+# CX25840 registers written by the Windows driver with AUDIO CAPTURE ENABLED
+#
+# Captured 2026-08-23 with usbmon on the host while VirtualDub ran in a WinXP
+# VM with an audio capture pin open. The project's main session,
+# full-session-replay.txt, was recorded with VirtualDub previewing VIDEO ONLY,
+# so it contains no audio-path setup at all -- which is why our captures were
+# silent for a day.
+#
+# Only short register writes (opcode 0x08 to slave 0x44, count <= 6) are listed;
+# the 59-byte writes to 0x0802 are the audio microcode download and are already
+# understood.
+#
+# "NEW" marks a register the video-only session never writes.
+#
+# The whole of the audio fix is the first four lines: 0x0104-0x0107, AFE_CTRL.
+# Bits 7 and 8 are VGA_SEL_CH2/VGA_SEL_CH3, which choose whether the analogue
+# channels carry video or audio. Left at reset, the audio ADC is connected to
+# nothing -- it runs, it is clocked, and it digitises silence.
+
+  register  writes  status     windows values            ours
+    0x0103      20  differs    11 00 02                  11 00
+    0x0104       1  NEW        00                        -
+    0x0105       1  NEW        dc                        -
+    0x0106       1  NEW        04                        -
+    0x0107       1  NEW        07                        -
+    0x010a     348  differs    0a 09                     0a
+    0x0110     348  differs    e5 d6                     e5
+    0x0111     348  differs    d6 6b                     d6
+    0x0112     348  differs    98 ec                     98
+    0x0400      42  differs    00 21 24                  00 21
+    0x0401      42  differs    e0 a0 c0 e2               e0 a0 c0
+    0x041c      19  differs    00 99                     00
+    0x041d      19  differs    20 1f                     20
+    0x042f       7  differs    60 00                     60
+    0x0470       7  differs    7e 88                     7e
+    0x0473       7  differs    5b 5d                     5b
+    0x0474       7  differs    19 24                     19
+    0x0475       7  differs    70 30                     70
+    0x0476       7  differs    1e 24                     1e
+    0x0477       7  differs    1e 28                     1e
+    0x047a      14  differs    50 58 90 98               50 58
+    0x047b      14  differs    66 20                     66
+    0x047c       7  differs    1f 63                     1f
+    0x047d       7  differs    7c 82                     7c
+    0x047e       7  differs    08 0a                     08
+    0x047f       7  differs    00 01                     00
+    0x049f      15  differs    20 06                     20
+    0x0809       5  differs    00 04                     00
+    0x08f8     167  differs    00 cd                     00
+    0x08f9     167  differs    80 60                     80
+    0x0900     348  differs    55 aa 59 85               55 aa
+    0x0901     348  differs    55 4f 6d 73               55 4f
+    0x0904     348  differs    55 aa 59 85               55 aa
+    0x0905     348  differs    55 4f 6d 73               55 4f
+    0x090c     348  differs    55 aa 59 85               55 aa
+    0x090d     348  differs    55 4f 6d 73               55 4f

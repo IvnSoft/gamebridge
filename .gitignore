@@ -1,0 +1,33 @@
+# Adaptec copyright. Fetched by tools/fetch-firmware.sh, never committed.
+# See NOTICE.
+/firmware/*
+!/firmware/.gitkeep
+diagnosis_1.html
+diagnosis_2.html
+# Build output
+/tools/gbfw
+/tools/gbcap
+/tools/gbloop
+/tools/gbtest
+/tools/gbcxreg
+/tools/gbstop
+*.o
+*.ko
+*.pyc
+__pycache__/
+
+# Capture dumps can be hundreds of MB
+*.pcapng
+*.raw
+*.uyvy
+
+# ...but the small committed evidence trail in captures/ is deliberate.
+# These are the artefacts the findings rest on.
+!captures/samples/*.raw
+tools/gblat
+
+# Fuzzing (tools/fuzz): binary, generated corpus, findings, logs
+/tools/fuzz/fuzz-bt656
+/tools/fuzz/corpus/
+/tools/fuzz/crashes/
+/tools/fuzz/run.log

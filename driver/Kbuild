@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: GPL-2.0
+obj-m := gamebridge.o
+
+# gb-bt656.o is the frame assembler, and it is the same source tools/gbcap.c
+# compiles. That is the point of it being a separate translation unit: every
+# change to it can be replayed against a saved capture in userspace, in a
+# second, with no device attached and no risk of an oops in softirq context.
+# See gb-bt656.h.
+gamebridge-y := gb-core.o gb-fw.o gb-cmd.o gb-i2c.o gb-v4l2.o gb-video.o gb-alsa.o gb-bt656.o
+
+# The IR receiver needs rc-core, which RHEL 9 does not build. gamebridge.h
+# stubs it out on the same condition (IS_ENABLED(CONFIG_RC_CORE)).
+ifneq ($(CONFIG_RC_CORE),)
+gamebridge-y += gb-ir.o
+endif
+
+ccflags-y := -Wall
+
+# Kernel compatibility is tested against the headers, never LINUX_VERSION_CODE:
+# RHEL backports pieces of newer APIs without changing the version number.
+# Rocky 9.8's 5.14 has vb2's min_queued_buffers (mainline 6.8) yet still names
+# the i2c transfer hook master_xfer (renamed xfer in mainline 6.8). Each test
+# greps the header the module is actually being built against.
+#
+# The pattern sits in its own variable because make counts parentheses even
+# inside quotes, and this one has an unmatched '('.
+gb_i2c_xfer_decl := int (*xfer)(struct i2c_adapter
+gb_has_i2c_xfer := $(shell grep -qsF '$(gb_i2c_xfer_decl)' \
+	$(srctree)/include/linux/i2c.h && echo y)
+ifneq ($(gb_has_i2c_xfer),y)
+ccflags-y += -DGB_COMPAT_I2C_MASTER_XFER
+endif
+
+# vb2_ops.wait_prepare/wait_finish are gone in 7.x: there the core releases
+# vb2_queue.lock itself while a reader waits for a buffer, and this driver sets
+# that lock. Older kernels (6.16, RHEL 9's 5.14) still need the two callbacks
+# to drop it, or a blocking DQBUF holds the lock against every other ioctl.
+gb_vb2_wait_decl := void (*wait_prepare)(struct vb2_queue
+gb_has_vb2_wait := $(shell grep -qsF '$(gb_vb2_wait_decl)' \
+	$(srctree)/include/media/videobuf2-core.h && echo y)
+ifeq ($(gb_has_vb2_wait),y)
+ccflags-y += -DGB_HAVE_VB2_WAIT_PREPARE
+endif
